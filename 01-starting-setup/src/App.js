@@ -13,7 +13,7 @@
 
 import Expenses from "./components/Expenses/Expenses";
 
-function App() {
+const App = () => {
   const expenses = [
     { 
       id: 'element1', 

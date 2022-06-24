@@ -4,7 +4,7 @@ import Card from "../UI/Card"
 
 // components/ExpenseItem.js
 // here we have our javascript function
-function ExpenseItem(props) {
+const ExpenseItem = (props) => {
     /**
      * we really want these in App.js, so we
      * can pass them as parameters.(props)
