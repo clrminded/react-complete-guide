@@ -11,7 +11,7 @@
 // the ExpenseItem() that we wrote, so we can use
 // it in this main App
 
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 
 function App() {
   const expenses = [
