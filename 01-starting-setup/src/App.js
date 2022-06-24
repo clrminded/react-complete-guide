@@ -44,7 +44,7 @@ const App = () => {
   return (
     <div>
       <h2>Let's get started!</h2>
-      <Expenses expenseItem={expenses}/>
+      <Expenses items={expenses}/>
     </div>
   );
 }
