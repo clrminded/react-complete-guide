@@ -1,4 +1,5 @@
 import './ExpenseItem.css'
+import ExpenseDate from "./ExpenseDate" //4
 
 // components/ExpenseItem.js
 // here we have our javascript function
@@ -13,18 +14,18 @@ function ExpenseItem(props) {
      * KEY CONCEPT: You have to know the name of the
      * props objects argument names (title,amount)
      * Date params order: YYYY,MM,DD
+     *
+     * We are moving these into ExpenseDate to make a new component
+     * const month = props.date.toLocaleString('en-US', { month: 'long' });
+     * const day = props.date.toLocaleString('en-US', { day: '2-digit' });
+     * const year = props.date.getFullYear();
      */
-    const month = props.date.toLocaleString('en-US', { month: 'long' });
-    const day = props.date.toLocaleString('en-US', { day: '2-digit' });
-    const year = props.date.getFullYear();
-
+    
     return (
         <div className="expense-item">
-            <div>
-                <div>{month}</div>
-                <div>{day}</div>
-                <div>{year}</div>
-            </div>
+            <ExpenseDate 
+                date={props.date}
+            />
             <div className="expense-item__description">
                 <h2>{props.title}</h2>
                 <div className="expense-item__price">${props.amount}</div>
@@ -48,5 +49,9 @@ export default ExpenseItem;
  * 
  * className is a reserved word for css, so
  * reacts jsx uses className.
+ * 
+ * Handy shortcut, components can be self closing
+ * you just have to add the /> at the end instead
+ * of a new </componentName>
  */
 
